@@ -1,0 +1,98 @@
+{
+  "stage": "November 25\u201326: preliminary baselines, not final test evaluation",
+  "input": "data/train.csv: model_text",
+  "label": "0=Non-biased; 1=Biased",
+  "train_sha256": "effc418d05c7f80bc5dd34b9778ee9685c48653421460d49cb6d223056a47ddf",
+  "training_rows": 2938,
+  "training_label_counts": {
+    "0": 1490,
+    "1": 1448
+  },
+  "cv": {
+    "method": "StratifiedGroupKFold",
+    "n_splits": 5,
+    "shuffle": true,
+    "random_state": 42,
+    "groups": "news_link"
+  },
+  "majority": {
+    "strategy": "most_frequent"
+  },
+  "tfidf": {
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 1,
+    "max_df": 1.0,
+    "max_features": null,
+    "sublinear_tf": false,
+    "stop_words": null,
+    "lowercase": true
+  },
+  "logistic_regression": {
+    "C": 1.0,
+    "max_iter": 1000,
+    "solver": "lbfgs",
+    "random_state": 42,
+    "class_weight": null
+  },
+  "majority_parameters": {
+    "constant": null,
+    "random_state": null,
+    "strategy": "most_frequent"
+  },
+  "tfidf_parameters": {
+    "analyzer": "word",
+    "binary": false,
+    "decode_error": "strict",
+    "dtype": "<class 'numpy.float64'>",
+    "encoding": "utf-8",
+    "input": "content",
+    "lowercase": true,
+    "max_df": 1.0,
+    "max_features": null,
+    "min_df": 1,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "norm": "l2",
+    "preprocessor": null,
+    "smooth_idf": true,
+    "stop_words": null,
+    "strip_accents": null,
+    "sublinear_tf": false,
+    "token_pattern": "(?u)\\b\\w\\w+\\b",
+    "tokenizer": null,
+    "use_idf": true,
+    "vocabulary": null
+  },
+  "logistic_parameters": {
+    "C": 1.0,
+    "class_weight": null,
+    "dual": false,
+    "fit_intercept": true,
+    "intercept_scaling": 1,
+    "l1_ratio": 0.0,
+    "max_iter": 1000,
+    "n_jobs": null,
+    "penalty": "deprecated",
+    "random_state": 42,
+    "solver": "lbfgs",
+    "tol": 0.0001,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "vocabulary_size_full_train": 67662,
+  "metric_aggregation": "unweighted mean over five validation folds; population SD for macro F1",
+  "held_out_test_evaluated": false,
+  "versions": {
+    "python": "3.13.5",
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "joblib": "1.5.3"
+  }
+}

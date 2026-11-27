@@ -1,0 +1,9 @@
+# Member 2 environment tested with Python 3.13.5.
+# Use this file alongside (not instead of) the team requirements.txt.
+numpy==2.3.5
+scipy==1.17.0
+pandas==2.2.3
+scikit-learn==1.8.0
+joblib==1.5.3
+notebook==7.5.3
+ipykernel==7.2.0
