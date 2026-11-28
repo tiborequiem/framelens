@@ -1,0 +1,9 @@
+# Core FrameLens team dependencies (compatible alongside requirements-ml.txt)
+numpy
+scipy
+pandas
+scikit-learn
+joblib
+matplotlib
+nltk
+streamlit

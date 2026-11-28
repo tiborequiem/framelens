@@ -1,0 +1,30 @@
+# Python environments & caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter & IDE
+.ipynb_checkpoints/
+.vscode/
+.idea/
+
+# OS & archives
+.DS_Store
+Thumbs.db
+*.zip
+*.log
+*.tmp
+
+# Environment & local config
+.env
+.env.*
+
+# Streamlit local secrets
+.streamlit/secrets.toml
+
+# Large raw datasets or binary artifacts (untrack/ignore future large files)
+data/raw/
+*.xlsx
+*.pkl
